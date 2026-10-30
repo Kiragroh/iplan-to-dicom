@@ -1,0 +1,33 @@
+{
+  "edition": "2025e",
+  "sampled": false,
+  "checked": 750,
+  "failed": 0,
+  "by_modality": {
+    "CT": {
+      "checked": 573,
+      "failed": 0,
+      "errors": []
+    },
+    "MR": {
+      "checked": 174,
+      "failed": 0,
+      "errors": []
+    },
+    "RTDOSE": {
+      "checked": 1,
+      "failed": 0,
+      "errors": []
+    },
+    "RTPLAN": {
+      "checked": 1,
+      "failed": 0,
+      "errors": []
+    },
+    "RTSTRUCT": {
+      "checked": 1,
+      "failed": 0,
+      "errors": []
+    }
+  }
+}

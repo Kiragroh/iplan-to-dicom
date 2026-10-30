@@ -1,0 +1,85 @@
+{
+  "read_only_sources": true,
+  "no_reference_values_used_for_reconstruction": true,
+  "status": "completed",
+  "cases": [
+    {
+      "case_index": 1,
+      "matching_plan_indices": [
+        2,
+        3
+      ],
+      "selected_plan_index": 3,
+      "source_tissue_shape": [
+        188,
+        337,
+        339
+      ],
+      "reference_dose_shape": [
+        28,
+        336,
+        336
+      ],
+      "source_nonzero_tissue_voxels": 6886721,
+      "sampled_support_count": 1180391,
+      "native_positive_count": 1180390,
+      "native_positive_outside_support": 0,
+      "native_zero_inside_support_with_dose_gt_0_01Gy": 1,
+      "manual_rounding_vs_scipy_value_difference_count": 0,
+      "metrics": {
+        "unclipped": {
+          "all_pixel_rmse_gy": 0.6426248614285847,
+          "all_pixel_max_abs_gy": 18.193379606306447,
+          "positive_reference_rmse_gy": 0.00026643430217134797,
+          "positive_reference_max_abs_gy": 0.0004667204887311982
+        },
+        "TP_nonzero_nearest_support": {
+          "all_pixel_rmse_gy": 0.0003683696444727189,
+          "all_pixel_max_abs_gy": 0.587498926329816,
+          "positive_reference_rmse_gy": 0.00026643430217134797,
+          "positive_reference_max_abs_gy": 0.0004667204887311982
+        }
+      },
+      "status": "compared"
+    },
+    {
+      "case_index": 7,
+      "matching_plan_indices": [
+        0,
+        2
+      ],
+      "selected_plan_index": 2,
+      "source_tissue_shape": [
+        165,
+        293,
+        292
+      ],
+      "reference_dose_shape": [
+        22,
+        290,
+        290
+      ],
+      "source_nonzero_tissue_voxels": 5842895,
+      "sampled_support_count": 949342,
+      "native_positive_count": 949342,
+      "native_positive_outside_support": 0,
+      "native_zero_inside_support_with_dose_gt_0_01Gy": 0,
+      "manual_rounding_vs_scipy_value_difference_count": 0,
+      "metrics": {
+        "unclipped": {
+          "all_pixel_rmse_gy": 0.5567842918375778,
+          "all_pixel_max_abs_gy": 4.225478129706949,
+          "positive_reference_rmse_gy": 0.00026680881952521543,
+          "positive_reference_max_abs_gy": 0.00046710667827909447
+        },
+        "TP_nonzero_nearest_support": {
+          "all_pixel_rmse_gy": 0.0001911182633994388,
+          "all_pixel_max_abs_gy": 0.00046710667827909447,
+          "positive_reference_rmse_gy": 0.00026680881952521543,
+          "positive_reference_max_abs_gy": 0.00046710667827909447
+        }
+      },
+      "status": "compared"
+    }
+  ]
+}

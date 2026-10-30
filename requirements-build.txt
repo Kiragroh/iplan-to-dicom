@@ -1,0 +1,6 @@
+numpy==2.4.4
+scipy==1.17.1
+pydicom==2.4.5
+Pillow==12.2.0
+scikit-image==0.26.0
+pyinstaller==6.20.0

@@ -1,0 +1,1655 @@
+{
+  "validation_kind": "independent_native_dose_quantization",
+  "case7_held_out_until_affine_fixed": true,
+  "source_pixels_from_reference": false,
+  "interpolation": "trilinear; clamp edge within calculation crop; center-lattice outside reported separately",
+  "source_support_rule": "nearest source TP HU+1024 greater than zero, inside TP crop and native coarse half-cell domain [-0.5,n-0.5)",
+  "default_output_grid": "fine source TissueProvider lattice; interpolate dose before support masking",
+  "support_boundary_precision": "double coordinates; no fitted half-index epsilon",
+  "cases": [
+    {
+      "case_index": 1,
+      "plans": [
+        {
+          "plan_index": 0,
+          "beam_count": 8,
+          "fractions": 30,
+          "comparison": {
+            "source_shape_zyx": [
+              93,
+              111,
+              111
+            ],
+            "source_algorithm_versions": [
+              "iPlan RT Dose 4.5.5"
+            ],
+            "reference_software_version": "4.5.6",
+            "reference_shape_zyx": [
+              28,
+              336,
+              336
+            ],
+            "source_max_gy": 60.0227474514395,
+            "reference_max_gy": 60.0438308717,
+            "reference_quantum_gy": 0.00092375124418,
+            "floating_allowance_gy": 5.7262259360868484e-05,
+            "quantization_bound_gy": 0.000519137887749821,
+            "all_inside": {
+              "count": 3054808,
+              "rmse_gy": 0.693953753261638,
+              "mean_error_gy": 0.3634234521282657,
+              "max_abs_error_gy": 15.833513047190536,
+              "p95_abs_error_gy": 1.5594300449361054,
+              "exceeding_quantization_bound": 3044063,
+              "passes_quantization_bound": false
+            },
+            "positive_inside": {
+              "count": 1180390,
+              "rmse_gy": 0.4459533212171163,
+              "mean_error_gy": 0.058722195567111266,
+              "max_abs_error_gy": 9.474614284952388,
+              "p95_abs_error_gy": 0.8652484760890747,
+              "exceeding_quantization_bound": 1169645,
+              "passes_quantization_bound": false
+            },
+            "zero_reference_inside": {
+              "count": 1874418,
+              "rmse_gy": 0.812155649067184,
+              "mean_error_gy": 0.5553050474993202,
+              "max_abs_error_gy": 15.833513047190536,
+              "p95_abs_error_gy": 1.7784997526052144,
+              "exceeding_quantization_bound": 1874418,
+              "passes_quantization_bound": false
+            },
+            "above_1gy_inside": {
+              "count": 569828,
+              "rmse_gy": 0.6353398907172038,
+              "mean_error_gy": 0.09158280583057464,
+              "max_abs_error_gy": 9.474614284952388,
+              "p95_abs_error_gy": 1.0914801991010952,
+              "exceeding_quantization_bound": 568124,
+              "passes_quantization_bound": false
+            },
+            "positive_outside_center_lattice": {
+              "count": 0,
+              "passes_quantization_bound": null
+            },
+            "zero_reference_outside_center_lattice_count": 106280,
+            "source_support_at_reference_voxels": {
+              "all_voxels": {
+                "count": 3161088,
+                "rmse_gy": 0.2725111144626693,
+                "mean_error_gy": 0.02192780050512599,
+                "max_abs_error_gy": 9.474614284952388,
+                "p95_abs_error_gy": 0.4536076450071026,
+                "exceeding_quantization_bound": 1169646,
+                "passes_quantization_bound": false
+              },
+              "source_support_count": 1180391,
+              "reference_positive_outside_source_support": 0,
+              "reference_zero_inside_source_support": 1
+            },
+            "source_dose_deposition_medium": "DOSE_TO_MEDIUM"
+          }
+        },
+        {
+          "plan_index": 1,
+          "blocked": "Only the verified stored Monte Carlo algorithm is supported"
+        },
+        {
+          "plan_index": 2,
+          "beam_count": 9,
+          "fractions": 30,
+          "comparison": {
+            "source_shape_zyx": [
+              93,
+              111,
+              111
+            ],
+            "source_algorithm_versions": [
+              "iPlan RT Dose 4.5.5"
+            ],
+            "reference_software_version": "4.5.6",
+            "reference_shape_zyx": [
+              28,
+              336,
+              336
+            ],
+            "source_max_gy": 59.900219761475455,
+            "reference_max_gy": 60.0438308717,
+            "reference_quantum_gy": 0.00092375124418,
+            "floating_allowance_gy": 5.7262259360868484e-05,
+            "quantization_bound_gy": 0.000519137887749821,
+            "all_inside": {
+              "count": 3054808,
+              "rmse_gy": 0.6357897464451372,
+              "mean_error_gy": 0.34255028556847855,
+              "max_abs_error_gy": 18.253543781521735,
+              "p95_abs_error_gy": 1.512899277295324,
+              "exceeding_quantization_bound": 3039340,
+              "passes_quantization_bound": false
+            },
+            "positive_inside": {
+              "count": 1180390,
+              "rmse_gy": 0.08555639546856693,
+              "mean_error_gy": -0.0009182431808230134,
+              "max_abs_error_gy": 1.5465782973235536,
+              "p95_abs_error_gy": 0.17458701640464847,
+              "exceeding_quantization_bound": 1164922,
+              "passes_quantization_bound": false
+            },
+            "zero_reference_inside": {
+              "count": 1874418,
+              "rmse_gy": 0.8088118574991169,
+              "mean_error_gy": 0.5588450590130294,
+              "max_abs_error_gy": 18.253543781521735,
+              "p95_abs_error_gy": 1.806930899173388,
+              "exceeding_quantization_bound": 1874418,
+              "passes_quantization_bound": false
+            },
+            "above_1gy_inside": {
+              "count": 569828,
+              "rmse_gy": 0.11119946062308156,
+              "mean_error_gy": -0.002296528701345764,
+              "max_abs_error_gy": 1.5465782973235536,
+              "p95_abs_error_gy": 0.2307590575361608,
+              "exceeding_quantization_bound": 566071,
+              "passes_quantization_bound": false
+            },
+            "positive_outside_center_lattice": {
+              "count": 0,
+              "passes_quantization_bound": null
+            },
+            "zero_reference_outside_center_lattice_count": 106280,
+            "source_support_at_reference_voxels": {
+              "all_voxels": {
+                "count": 3161088,
+                "rmse_gy": 0.05228237744478038,
+                "mean_error_gy": -0.00034270086127707986,
+                "max_abs_error_gy": 1.5465782973235536,
+                "p95_abs_error_gy": 0.09386366204894407,
+                "exceeding_quantization_bound": 1164923,
+                "passes_quantization_bound": false
+              },
+              "source_support_count": 1180391,
+              "reference_positive_outside_source_support": 0,
+              "reference_zero_inside_source_support": 1
+            },
+            "source_dose_deposition_medium": "DOSE_TO_MEDIUM"
+          }
+        },
+        {
+          "plan_index": 3,
+          "beam_count": 9,
+          "fractions": 30,
+          "comparison": {
+            "source_shape_zyx": [
+              93,
+              111,
+              111
+            ],
+            "source_algorithm_versions": [
+              "iPlan RT Dose 4.5.6"
+            ],
+            "reference_software_version": "4.5.6",
+            "reference_shape_zyx": [
+              28,
+              336,
+              336
+            ],
+            "source_max_gy": 60.23767367441906,
+            "reference_max_gy": 60.0438308717,
+            "reference_quantum_gy": 0.00092375124418,
+            "floating_allowance_gy": 5.744712325395085e-05,
+            "quantization_bound_gy": 0.0005193227552808821,
+            "all_inside": {
+              "count": 3054808,
+              "rmse_gy": 0.634012148824281,
+              "mean_error_gy": 0.3404478872395028,
+              "max_abs_error_gy": 18.193379606306447,
+              "p95_abs_error_gy": 1.5210242217024903,
+              "exceeding_quantization_bound": 1874418,
+              "passes_quantization_bound": false
+            },
+            "positive_inside": {
+              "count": 1180390,
+              "rmse_gy": 0.00026643430217134797,
+              "mean_error_gy": 9.669352364623658e-08,
+              "max_abs_error_gy": 0.0004667204887311982,
+              "p95_abs_error_gy": 0.00043867483675769786,
+              "exceeding_quantization_bound": 0,
+              "passes_quantization_bound": true
+            },
+            "zero_reference_inside": {
+              "count": 1874418,
+              "rmse_gy": 0.8093871433384424,
+              "mean_error_gy": 0.5548403906632686,
+              "max_abs_error_gy": 18.193379606306447,
+              "p95_abs_error_gy": 1.7965430618649638,
+              "exceeding_quantization_bound": 1874418,
+              "passes_quantization_bound": false
+            },
+            "above_1gy_inside": {
+              "count": 569828,
+              "rmse_gy": 0.00026624200137332304,
+              "mean_error_gy": 6.432436706971414e-08,
+              "max_abs_error_gy": 0.0004667204887311982,
+              "p95_abs_error_gy": 0.00043857709344053976,
+              "exceeding_quantization_bound": 0,
+              "passes_quantization_bound": true
+            },
+            "positive_outside_center_lattice": {
+              "count": 0,
+              "passes_quantization_bound": null
+            },
+            "zero_reference_outside_center_lattice_count": 106280,
+            "source_support_at_reference_voxels": {
+              "all_voxels": {
+                "count": 3161088,
+                "rmse_gy": 0.0003683696444727189,
+                "mean_error_gy": 2.2195996906969922e-07,
+                "max_abs_error_gy": 0.587498926329816,
+                "p95_abs_error_gy": 0.00039986379171970117,
+                "exceeding_quantization_bound": 1,
+                "passes_quantization_bound": false
+              },
+              "source_support_count": 1180391,
+              "reference_positive_outside_source_support": 0,
+              "reference_zero_inside_source_support": 1
+            },
+            "source_dose_deposition_medium": "DOSE_TO_MEDIUM"
+          }
+        }
+      ],
+      "closest_plan_index": 3,
+      "matching_plan_index": null,
+      "matching_positive_plan_index": 3,
+      "matching_supported_plan_index": null,
+      "fine_tissue_export_grid_comparison": {
+        "source_shape_zyx": [
+          188,
+          337,
+          339
+        ],
+        "source_algorithm_versions": [
+          "iPlan RT Dose 4.5.6"
+        ],
+        "reference_software_version": "4.5.6",
+        "reference_shape_zyx": [
+          28,
+          336,
+          336
+        ],
+        "source_max_gy": 60.237673674419014,
+        "reference_max_gy": 60.0438308717,
+        "reference_quantum_gy": 0.00092375124418,
+        "floating_allowance_gy": 5.744712325395085e-05,
+        "quantization_bound_gy": 0.0005193227552808821,
+        "all_inside": {
+          "count": 3157359,
+          "rmse_gy": 0.057097101161269266,
+          "mean_error_gy": -8.657811028390583e-06,
+          "max_abs_error_gy": 5.037336242612444,
+          "p95_abs_error_gy": 0.00043878997367432495,
+          "exceeding_quantization_bound": 101323,
+          "passes_quantization_bound": false
+        },
+        "positive_inside": {
+          "count": 1180390,
+          "rmse_gy": 0.06622455553639037,
+          "mean_error_gy": -0.007810074006686066,
+          "max_abs_error_gy": 4.638807297177117,
+          "p95_abs_error_gy": 0.00045683010586194814,
+          "exceeding_quantization_bound": 46644,
+          "passes_quantization_bound": false
+        },
+        "zero_reference_inside": {
+          "count": 1976969,
+          "rmse_gy": 0.05087247480035024,
+          "mean_error_gy": 0.004649338173325619,
+          "max_abs_error_gy": 5.037336242612444,
+          "p95_abs_error_gy": 0.0,
+          "exceeding_quantization_bound": 54679,
+          "passes_quantization_bound": false
+        },
+        "above_1gy_inside": {
+          "count": 569828,
+          "rmse_gy": 0.08722516988812257,
+          "mean_error_gy": -0.010282567636218418,
+          "max_abs_error_gy": 4.638807297177117,
+          "p95_abs_error_gy": 0.00045054465093983257,
+          "exceeding_quantization_bound": 14955,
+          "passes_quantization_bound": false
+        },
+        "positive_outside_center_lattice": {
+          "count": 0,
+          "passes_quantization_bound": null
+        },
+        "zero_reference_outside_center_lattice_count": 3729,
+        "source_dose_deposition_medium": "DOSE_TO_MEDIUM"
+      }
+    },
+    {
+      "case_index": 2,
+      "plans": [
+        {
+          "plan_index": 0,
+          "beam_count": 9,
+          "fractions": 5,
+          "comparison": {
+            "source_shape_zyx": [
+              88,
+              125,
+              126
+            ],
+            "source_algorithm_versions": [
+              "iPlan RT Dose 4.5.5"
+            ],
+            "reference_software_version": "4.5.6",
+            "reference_shape_zyx": [
+              19,
+              252,
+              254
+            ],
+            "source_max_gy": 31.242068612773437,
+            "reference_max_gy": 31.2294998171,
+            "reference_quantum_gy": 0.00048045384334,
+            "floating_allowance_gy": 2.979475902975537e-05,
+            "quantization_bound_gy": 0.00027002167189493775,
+            "all_inside": {
+              "count": 1178361,
+              "rmse_gy": 0.32276847857604707,
+              "mean_error_gy": 0.1733337568790014,
+              "max_abs_error_gy": 4.741953107315479,
+              "p95_abs_error_gy": 0.6674324986604323,
+              "exceeding_quantization_bound": 1172992,
+              "passes_quantization_bound": false
+            },
+            "positive_inside": {
+              "count": 605879,
+              "rmse_gy": 0.04774443630309426,
+              "mean_error_gy": -0.0006309780062141003,
+              "max_abs_error_gy": 0.606347990569919,
+              "p95_abs_error_gy": 0.09991235354131325,
+              "exceeding_quantization_bound": 600510,
+              "passes_quantization_bound": false
+            },
+            "zero_reference_inside": {
+              "count": 572482,
+              "rmse_gy": 0.46046064890951444,
+              "mean_error_gy": 0.3574471082289469,
+              "max_abs_error_gy": 4.741953107315479,
+              "p95_abs_error_gy": 0.9013935731794581,
+              "exceeding_quantization_bound": 572482,
+              "passes_quantization_bound": false
+            },
+            "above_1gy_inside": {
+              "count": 251302,
+              "rmse_gy": 0.057752557236062936,
+              "mean_error_gy": -0.0032527473772423496,
+              "max_abs_error_gy": 0.606347990569919,
+              "p95_abs_error_gy": 0.11678744918407212,
+              "exceeding_quantization_bound": 250037,
+              "passes_quantization_bound": false
+            },
+            "positive_outside_center_lattice": {
+              "count": 400,
+              "rmse_gy": 0.07336926400557338,
+              "mean_error_gy": 0.01674958913035826,
+              "max_abs_error_gy": 0.24463773554073667,
+              "p95_abs_error_gy": 0.14415617059191885,
+              "exceeding_quantization_bound": 400,
+              "passes_quantization_bound": false
+            },
+            "zero_reference_outside_center_lattice_count": 37391,
+            "source_support_at_reference_voxels": {
+              "all_voxels": {
+                "count": 1216152,
+                "rmse_gy": 0.0337256297815481,
+                "mean_error_gy": -0.0003088400855936179,
+                "max_abs_error_gy": 0.606347990569919,
+                "p95_abs_error_gy": 0.07138164031834707,
+                "exceeding_quantization_bound": 600910,
+                "passes_quantization_bound": false
+              },
+              "source_support_count": 606279,
+              "reference_positive_outside_source_support": 0,
+              "reference_zero_inside_source_support": 0
+            },
+            "source_dose_deposition_medium": "DOSE_TO_MEDIUM"
+          }
+        },
+        {
+          "plan_index": 1,
+          "blocked": "Fractionation is missing or differs across targets"
+        }
+      ],
+      "closest_plan_index": 0,
+      "matching_plan_index": null,
+      "matching_positive_plan_index": null,
+      "matching_supported_plan_index": null,
+      "fine_tissue_export_grid_comparison": {
+        "source_shape_zyx": [
+          178,
+          254,
+          255
+        ],
+        "source_algorithm_versions": [
+          "iPlan RT Dose 4.5.5"
+        ],
+        "reference_software_version": "4.5.6",
+        "reference_shape_zyx": [
+          19,
+          252,
+          254
+        ],
+        "source_max_gy": 31.134901866689685,
+        "reference_max_gy": 31.2294998171,
+        "reference_quantum_gy": 0.00048045384334,
+        "floating_allowance_gy": 2.9782771889586e-05,
+        "quantization_bound_gy": 0.0002700096811167896,
+        "all_inside": {
+          "count": 1215654,
+          "rmse_gy": 0.04902364886633648,
+          "mean_error_gy": 0.0008743255613019087,
+          "max_abs_error_gy": 2.836264540647095,
+          "p95_abs_error_gy": 0.08195739894074684,
+          "exceeding_quantization_bound": 633296,
+          "passes_quantization_bound": false
+        },
+        "positive_inside": {
+          "count": 606279,
+          "rmse_gy": 0.052250814806826994,
+          "mean_error_gy": -0.0033648282133214723,
+          "max_abs_error_gy": 2.244516140036196,
+          "p95_abs_error_gy": 0.1038943090064751,
+          "exceeding_quantization_bound": 600807,
+          "passes_quantization_bound": false
+        },
+        "zero_reference_inside": {
+          "count": 609375,
+          "rmse_gy": 0.04558672112959258,
+          "mean_error_gy": 0.005091941826040188,
+          "max_abs_error_gy": 2.836264540647095,
+          "p95_abs_error_gy": 0.002937029417717055,
+          "exceeding_quantization_bound": 32489,
+          "passes_quantization_bound": false
+        },
+        "above_1gy_inside": {
+          "count": 251302,
+          "rmse_gy": 0.06414565081174248,
+          "mean_error_gy": -0.005910873566777653,
+          "max_abs_error_gy": 2.244516140036196,
+          "p95_abs_error_gy": 0.12029756371017468,
+          "exceeding_quantization_bound": 250045,
+          "passes_quantization_bound": false
+        },
+        "positive_outside_center_lattice": {
+          "count": 0,
+          "passes_quantization_bound": null
+        },
+        "zero_reference_outside_center_lattice_count": 498,
+        "source_dose_deposition_medium": "DOSE_TO_MEDIUM"
+      }
+    },
+    {
+      "case_index": 3,
+      "plans": [
+        {
+          "plan_index": 0,
+          "beam_count": 11,
+          "fractions": 5,
+          "comparison": {
+            "source_shape_zyx": [
+              81,
+              90,
+              92
+            ],
+            "source_algorithm_versions": [
+              "iPlan RT Dose 4.5.5"
+            ],
+            "reference_software_version": "4.5.6",
+            "reference_shape_zyx": [
+              29,
+              274,
+              280
+            ],
+            "source_max_gy": 31.352305489126593,
+            "reference_max_gy": 31.17409896835,
+            "reference_quantum_gy": 0.00047960152259,
+            "floating_allowance_gy": 2.9899889341322705e-05,
+            "quantization_bound_gy": 0.000269700656645,
+            "all_inside": {
+              "count": 2122466,
+              "rmse_gy": 0.4686275206245415,
+              "mean_error_gy": 0.24203423062305757,
+              "max_abs_error_gy": 4.168816914388989,
+              "p95_abs_error_gy": 1.0058114826472728,
+              "exceeding_quantization_bound": 2119754,
+              "passes_quantization_bound": false
+            },
+            "positive_inside": {
+              "count": 1219480,
+              "rmse_gy": 0.4720331861937034,
+              "mean_error_gy": 0.13664739088008349,
+              "max_abs_error_gy": 4.168816914388989,
+              "p95_abs_error_gy": 1.0859938960589974,
+              "exceeding_quantization_bound": 1216768,
+              "passes_quantization_bound": false
+            },
+            "zero_reference_inside": {
+              "count": 902986,
+              "rmse_gy": 0.46398850545370235,
+              "mean_error_gy": 0.38435885506879874,
+              "max_abs_error_gy": 2.7499904786583014,
+              "p95_abs_error_gy": 0.9094922026768504,
+              "exceeding_quantization_bound": 902986,
+              "passes_quantization_bound": false
+            },
+            "above_1gy_inside": {
+              "count": 317857,
+              "rmse_gy": 0.8710562405217978,
+              "mean_error_gy": 0.27041652718691567,
+              "max_abs_error_gy": 4.168816914388989,
+              "p95_abs_error_gy": 1.7908921458560803,
+              "exceeding_quantization_bound": 317778,
+              "passes_quantization_bound": false
+            },
+            "positive_outside_center_lattice": {
+              "count": 3768,
+              "rmse_gy": 0.09750477218540315,
+              "mean_error_gy": 0.027964945435689843,
+              "max_abs_error_gy": 0.49761682861733647,
+              "p95_abs_error_gy": 0.20570564837296898,
+              "exceeding_quantization_bound": 3758,
+              "passes_quantization_bound": false
+            },
+            "zero_reference_outside_center_lattice_count": 98646,
+            "source_support_at_reference_voxels": {
+              "all_voxels": {
+                "count": 2224880,
+                "rmse_gy": 0.34949036252085536,
+                "mean_error_gy": 0.07494522497610923,
+                "max_abs_error_gy": 4.168816914388989,
+                "p95_abs_error_gy": 0.7773068715859249,
+                "exceeding_quantization_bound": 1220526,
+                "passes_quantization_bound": false
+              },
+              "source_support_count": 1223248,
+              "reference_positive_outside_source_support": 0,
+              "reference_zero_inside_source_support": 0
+            },
+            "source_dose_deposition_medium": "DOSE_TO_MEDIUM"
+          }
+        },
+        {
+          "plan_index": 1,
+          "beam_count": 10,
+          "fractions": 5,
+          "comparison": {
+            "source_shape_zyx": [
+              81,
+              90,
+              92
+            ],
+            "source_algorithm_versions": [
+              "iPlan RT Dose 4.5.5"
+            ],
+            "reference_software_version": "4.5.6",
+            "reference_shape_zyx": [
+              29,
+              274,
+              280
+            ],
+            "source_max_gy": 31.23574103228748,
+            "reference_max_gy": 31.17409896835,
+            "reference_quantum_gy": 0.00047960152259,
+            "floating_allowance_gy": 2.9788723622914404e-05,
+            "quantization_bound_gy": 0.00026958948001265526,
+            "all_inside": {
+              "count": 2122466,
+              "rmse_gy": 0.3042245865024686,
+              "mean_error_gy": 0.15626395291918835,
+              "max_abs_error_gy": 3.129813855169651,
+              "p95_abs_error_gy": 0.5951932025451232,
+              "exceeding_quantization_bound": 2116273,
+              "passes_quantization_bound": false
+            },
+            "positive_inside": {
+              "count": 1219480,
+              "rmse_gy": 0.1957727639622803,
+              "mean_error_gy": 0.009793750940588396,
+              "max_abs_error_gy": 3.129813855169651,
+              "p95_abs_error_gy": 0.41494242253301955,
+              "exceeding_quantization_bound": 1213287,
+              "passes_quantization_bound": false
+            },
+            "zero_reference_inside": {
+              "count": 902986,
+              "rmse_gy": 0.40716599615809074,
+              "mean_error_gy": 0.3540715400898234,
+              "max_abs_error_gy": 2.582959645892912,
+              "p95_abs_error_gy": 0.6902349686366904,
+              "exceeding_quantization_bound": 902986,
+              "passes_quantization_bound": false
+            },
+            "above_1gy_inside": {
+              "count": 317857,
+              "rmse_gy": 0.3705298195264577,
+              "mean_error_gy": -0.019105273597159755,
+              "max_abs_error_gy": 3.129813855169651,
+              "p95_abs_error_gy": 0.786731096697351,
+              "exceeding_quantization_bound": 317420,
+              "passes_quantization_bound": false
+            },
+            "positive_outside_center_lattice": {
+              "count": 3768,
+              "rmse_gy": 0.09520363627668652,
+              "mean_error_gy": 0.02354962054154599,
+              "max_abs_error_gy": 0.585566738868986,
+              "p95_abs_error_gy": 0.2162297121351232,
+              "exceeding_quantization_bound": 3753,
+              "passes_quantization_bound": false
+            },
+            "zero_reference_outside_center_lattice_count": 98646,
+            "source_support_at_reference_voxels": {
+              "all_voxels": {
+                "count": 2224880,
+                "rmse_gy": 0.144992296551524,
+                "mean_error_gy": 0.005407940368572365,
+                "max_abs_error_gy": 3.129813855169651,
+                "p95_abs_error_gy": 0.2361873749129193,
+                "exceeding_quantization_bound": 1217040,
+                "passes_quantization_bound": false
+              },
+              "source_support_count": 1223248,
+              "reference_positive_outside_source_support": 0,
+              "reference_zero_inside_source_support": 0
+            },
+            "source_dose_deposition_medium": "DOSE_TO_MEDIUM"
+          }
+        },
+        {
+          "plan_index": 2,
+          "beam_count": 10,
+          "fractions": 5,
+          "comparison": {
+            "source_shape_zyx": [
+              81,
+              90,
+              92
+            ],
+            "source_algorithm_versions": [
+              "iPlan RT Dose 4.5.5"
+            ],
+            "reference_software_version": "4.5.6",
+            "reference_shape_zyx": [
+              29,
+              274,
+              280
+            ],
+            "source_max_gy": 31.264859254006296,
+            "reference_max_gy": 31.17409896835,
+            "reference_quantum_gy": 0.00047960152259,
+            "floating_allowance_gy": 2.9816494134138338e-05,
+            "quantization_bound_gy": 0.000269617245066911,
+            "all_inside": {
+              "count": 2122466,
+              "rmse_gy": 0.26491007866326366,
+              "mean_error_gy": 0.150847907076766,
+              "max_abs_error_gy": 2.2458888070666077,
+              "p95_abs_error_gy": 0.5518796049081361,
+              "exceeding_quantization_bound": 2110145,
+              "passes_quantization_bound": false
+            },
+            "positive_inside": {
+              "count": 1219480,
+              "rmse_gy": 0.04250318113541542,
+              "mean_error_gy": 0.0007385219370328044,
+              "max_abs_error_gy": 0.6057285048460983,
+              "p95_abs_error_gy": 0.08837722404326954,
+              "exceeding_quantization_bound": 1207159,
+              "passes_quantization_bound": false
+            },
+            "zero_reference_inside": {
+              "count": 902986,
+              "rmse_gy": 0.40312771984819096,
+              "mean_error_gy": 0.3535702006562919,
+              "max_abs_error_gy": 2.2458888070666077,
+              "p95_abs_error_gy": 0.6975022833572764,
+              "exceeding_quantization_bound": 902986,
+              "passes_quantization_bound": false
+            },
+            "above_1gy_inside": {
+              "count": 317857,
+              "rmse_gy": 0.05547331711569811,
+              "mean_error_gy": 0.0022448655330128443,
+              "max_abs_error_gy": 0.6057285048460983,
+              "p95_abs_error_gy": 0.11188798753657496,
+              "exceeding_quantization_bound": 316222,
+              "passes_quantization_bound": false
+            },
+            "positive_outside_center_lattice": {
+              "count": 3768,
+              "rmse_gy": 0.08672468362050324,
+              "mean_error_gy": -0.005462284774752425,
+              "max_abs_error_gy": 0.5619085091941187,
+              "p95_abs_error_gy": 0.1826012305517939,
+              "exceeding_quantization_bound": 3748,
+              "passes_quantization_bound": false
+            },
+            "zero_reference_outside_center_lattice_count": 98646,
+            "source_support_at_reference_voxels": {
+              "all_voxels": {
+                "count": 2224880,
+                "rmse_gy": 0.0316687605339376,
+                "mean_error_gy": 0.00039554081242201686,
+                "max_abs_error_gy": 0.6057285048460983,
+                "p95_abs_error_gy": 0.0650627553201036,
+                "exceeding_quantization_bound": 1210907,
+                "passes_quantization_bound": false
+              },
+              "source_support_count": 1223248,
+              "reference_positive_outside_source_support": 0,
+              "reference_zero_inside_source_support": 0
+            },
+            "source_dose_deposition_medium": "DOSE_TO_MEDIUM"
+          }
+        },
+        {
+          "plan_index": 3,
+          "blocked": "Only the verified stored Monte Carlo algorithm is supported"
+        }
+      ],
+      "closest_plan_index": 2,
+      "matching_plan_index": null,
+      "matching_positive_plan_index": null,
+      "matching_supported_plan_index": null,
+      "fine_tissue_export_grid_comparison": {
+        "source_shape_zyx": [
+          162,
+          275,
+          281
+        ],
+        "source_algorithm_versions": [
+          "iPlan RT Dose 4.5.5"
+        ],
+        "reference_software_version": "4.5.6",
+        "reference_shape_zyx": [
+          29,
+          274,
+          280
+        ],
+        "source_max_gy": 31.264859254006286,
+        "reference_max_gy": 31.17409896835,
+        "reference_quantum_gy": 0.00047960152259,
+        "floating_allowance_gy": 2.9816494134138338e-05,
+        "quantization_bound_gy": 0.000269617245066911,
+        "all_inside": {
+          "count": 2221198,
+          "rmse_gy": 0.034744797959447224,
+          "mean_error_gy": 0.0007906912732441759,
+          "max_abs_error_gy": 0.855698294625607,
+          "p95_abs_error_gy": 0.07105066348267795,
+          "exceeding_quantization_bound": 1259651,
+          "passes_quantization_bound": false
+        },
+        "positive_inside": {
+          "count": 1223248,
+          "rmse_gy": 0.044185434051834706,
+          "mean_error_gy": -0.0006510944870591701,
+          "max_abs_error_gy": 0.7549233313815005,
+          "p95_abs_error_gy": 0.0910328634521697,
+          "exceeding_quantization_bound": 1210925,
+          "passes_quantization_bound": false
+        },
+        "zero_reference_inside": {
+          "count": 997950,
+          "rmse_gy": 0.01714127650598362,
+          "mean_error_gy": 0.0025579757541495792,
+          "max_abs_error_gy": 0.855698294625607,
+          "p95_abs_error_gy": 0.0,
+          "exceeding_quantization_bound": 48726,
+          "passes_quantization_bound": false
+        },
+        "above_1gy_inside": {
+          "count": 317857,
+          "rmse_gy": 0.05678541405579702,
+          "mean_error_gy": 0.0017476849281811357,
+          "max_abs_error_gy": 0.7549233313815005,
+          "p95_abs_error_gy": 0.11287237279316324,
+          "exceeding_quantization_bound": 316222,
+          "passes_quantization_bound": false
+        },
+        "positive_outside_center_lattice": {
+          "count": 0,
+          "passes_quantization_bound": null
+        },
+        "zero_reference_outside_center_lattice_count": 3682,
+        "source_dose_deposition_medium": "DOSE_TO_MEDIUM"
+      }
+    },
+    {
+      "case_index": 4,
+      "plans": [
+        {
+          "plan_index": 0,
+          "beam_count": 8,
+          "fractions": 5,
+          "comparison": {
+            "source_shape_zyx": [
+              95,
+              103,
+              100
+            ],
+            "source_algorithm_versions": [
+              "iPlan RT Dose 4.5.5"
+            ],
+            "reference_software_version": "4.5.6",
+            "reference_shape_zyx": [
+              21,
+              310,
+              302
+            ],
+            "source_max_gy": 31.33557860273868,
+            "reference_max_gy": 31.12259864805,
+            "reference_quantum_gy": 0.00047880920997,
+            "floating_allowance_gy": 2.9883936804253608e-05,
+            "quantization_bound_gy": 0.00026928854640573263,
+            "all_inside": {
+              "count": 1918710,
+              "rmse_gy": 0.26441086720854023,
+              "mean_error_gy": 0.12976860073397378,
+              "max_abs_error_gy": 4.311759852984632,
+              "p95_abs_error_gy": 0.48584535003612667,
+              "exceeding_quantization_bound": 1904944,
+              "passes_quantization_bound": false
+            },
+            "positive_inside": {
+              "count": 1016441,
+              "rmse_gy": 0.03883008272073025,
+              "mean_error_gy": -0.002550752040469829,
+              "max_abs_error_gy": 0.6582337589259547,
+              "p95_abs_error_gy": 0.08184035507641302,
+              "exceeding_quantization_bound": 1002675,
+              "passes_quantization_bound": false
+            },
+            "zero_reference_inside": {
+              "count": 902269,
+              "rmse_gy": 0.3833723566552995,
+              "mean_error_gy": 0.27883148026702687,
+              "max_abs_error_gy": 4.311759852984632,
+              "p95_abs_error_gy": 0.6948213210585492,
+              "exceeding_quantization_bound": 902269,
+              "passes_quantization_bound": false
+            },
+            "above_1gy_inside": {
+              "count": 246726,
+              "rmse_gy": 0.05347159043735573,
+              "mean_error_gy": -0.00888727542288376,
+              "max_abs_error_gy": 0.6582337589259547,
+              "p95_abs_error_gy": 0.10649264939553205,
+              "exceeding_quantization_bound": 245428,
+              "passes_quantization_bound": false
+            },
+            "positive_outside_center_lattice": {
+              "count": 16,
+              "rmse_gy": 0.0321163880792413,
+              "mean_error_gy": 7.598067977556203e-05,
+              "max_abs_error_gy": 0.06092445962256596,
+              "p95_abs_error_gy": 0.05805996468320669,
+              "exceeding_quantization_bound": 16,
+              "passes_quantization_bound": false
+            },
+            "zero_reference_outside_center_lattice_count": 47294,
+            "source_support_at_reference_voxels": {
+              "all_voxels": {
+                "count": 1966020,
+                "rmse_gy": 0.027920151833110435,
+                "mean_error_gy": -0.0013187494222217052,
+                "max_abs_error_gy": 0.6582337589259547,
+                "p95_abs_error_gy": 0.0579855615310791,
+                "exceeding_quantization_bound": 1002691,
+                "passes_quantization_bound": false
+              },
+              "source_support_count": 1016457,
+              "reference_positive_outside_source_support": 0,
+              "reference_zero_inside_source_support": 0
+            },
+            "source_dose_deposition_medium": "DOSE_TO_MEDIUM"
+          }
+        },
+        {
+          "plan_index": 1,
+          "blocked": "Only the verified stored Monte Carlo algorithm is supported"
+        }
+      ],
+      "closest_plan_index": 0,
+      "matching_plan_index": null,
+      "matching_positive_plan_index": null,
+      "matching_supported_plan_index": null,
+      "fine_tissue_export_grid_comparison": {
+        "source_shape_zyx": [
+          190,
+          312,
+          304
+        ],
+        "source_algorithm_versions": [
+          "iPlan RT Dose 4.5.5"
+        ],
+        "reference_software_version": "4.5.6",
+        "reference_shape_zyx": [
+          21,
+          310,
+          302
+        ],
+        "source_max_gy": 31.335578602738654,
+        "reference_max_gy": 31.12259864805,
+        "reference_quantum_gy": 0.00047880920997,
+        "floating_allowance_gy": 2.9883936804253608e-05,
+        "quantization_bound_gy": 0.00026928854640573263,
+        "all_inside": {
+          "count": 1966020,
+          "rmse_gy": 0.036814283747680095,
+          "mean_error_gy": -0.0008829612180014328,
+          "max_abs_error_gy": 1.691451117227879,
+          "p95_abs_error_gy": 0.06339682386850344,
+          "exceeding_quantization_bound": 1049949,
+          "passes_quantization_bound": false
+        },
+        "positive_inside": {
+          "count": 1016457,
+          "rmse_gy": 0.04447640265773647,
+          "mean_error_gy": -0.004183314644764101,
+          "max_abs_error_gy": 1.6436545048191915,
+          "p95_abs_error_gy": 0.08454983948239389,
+          "exceeding_quantization_bound": 1002831,
+          "passes_quantization_bound": false
+        },
+        "zero_reference_inside": {
+          "count": 949563,
+          "rmse_gy": 0.026240311588176992,
+          "mean_error_gy": 0.002649892677008063,
+          "max_abs_error_gy": 1.691451117227879,
+          "p95_abs_error_gy": 0.000179316523808298,
+          "exceeding_quantization_bound": 47118,
+          "passes_quantization_bound": false
+        },
+        "above_1gy_inside": {
+          "count": 246726,
+          "rmse_gy": 0.06646577163890659,
+          "mean_error_gy": -0.01140886934194694,
+          "max_abs_error_gy": 1.6436545048191915,
+          "p95_abs_error_gy": 0.11072393868003871,
+          "exceeding_quantization_bound": 245435,
+          "passes_quantization_bound": false
+        },
+        "positive_outside_center_lattice": {
+          "count": 0,
+          "passes_quantization_bound": null
+        },
+        "zero_reference_outside_center_lattice_count": 0,
+        "source_dose_deposition_medium": "DOSE_TO_MEDIUM"
+      }
+    },
+    {
+      "case_index": 5,
+      "plans": [
+        {
+          "plan_index": 0,
+          "beam_count": 8,
+          "fractions": 5,
+          "comparison": {
+            "source_shape_zyx": [
+              100,
+              116,
+              116
+            ],
+            "source_algorithm_versions": [
+              "iPlan RT Dose 4.5.5"
+            ],
+            "reference_software_version": "4.5.6",
+            "reference_shape_zyx": [
+              23,
+              348,
+              350
+            ],
+            "source_max_gy": 31.290158500160032,
+            "reference_max_gy": 31.4459495545,
+            "reference_quantum_gy": 0.0004837838393,
+            "floating_allowance_gy": 2.9989194445079193e-05,
+            "quantization_bound_gy": 0.00027188111562281847,
+            "all_inside": {
+              "count": 2750384,
+              "rmse_gy": 0.26563651671260496,
+              "mean_error_gy": 0.12500752371008855,
+              "max_abs_error_gy": 6.378693092001296,
+              "p95_abs_error_gy": 0.6228188392033758,
+              "exceeding_quantization_bound": 2728703,
+              "passes_quantization_bound": false
+            },
+            "positive_inside": {
+              "count": 1242081,
+              "rmse_gy": 0.09728705529845594,
+              "mean_error_gy": -0.0049062238368954725,
+              "max_abs_error_gy": 6.378693092001296,
+              "p95_abs_error_gy": 0.10824010581903654,
+              "exceeding_quantization_bound": 1220400,
+              "passes_quantization_bound": false
+            },
+            "zero_reference_inside": {
+              "count": 1508303,
+              "rmse_gy": 0.3476732487575,
+              "mean_error_gy": 0.2319909331887579,
+              "max_abs_error_gy": 4.947507831604371,
+              "p95_abs_error_gy": 0.7555462167342529,
+              "exceeding_quantization_bound": 1508303,
+              "passes_quantization_bound": false
+            },
+            "above_1gy_inside": {
+              "count": 374736,
+              "rmse_gy": 0.17148258062775415,
+              "mean_error_gy": -0.011417262162710046,
+              "max_abs_error_gy": 6.378693092001296,
+              "p95_abs_error_gy": 0.21264736908907778,
+              "exceeding_quantization_bound": 373174,
+              "passes_quantization_bound": false
+            },
+            "positive_outside_center_lattice": {
+              "count": 0,
+              "passes_quantization_bound": null
+            },
+            "zero_reference_outside_center_lattice_count": 51016,
+            "source_support_at_reference_voxels": {
+              "all_voxels": {
+                "count": 2801400,
+                "rmse_gy": 0.06478022548691213,
+                "mean_error_gy": -0.0021753149887752425,
+                "max_abs_error_gy": 6.378693092001296,
+                "p95_abs_error_gy": 0.06598223318569632,
+                "exceeding_quantization_bound": 1220400,
+                "passes_quantization_bound": false
+              },
+              "source_support_count": 1242081,
+              "reference_positive_outside_source_support": 0,
+              "reference_zero_inside_source_support": 0
+            },
+            "source_dose_deposition_medium": "DOSE_TO_MEDIUM"
+          }
+        },
+        {
+          "plan_index": 1,
+          "beam_count": 8,
+          "fractions": 5,
+          "comparison": {
+            "source_shape_zyx": [
+              100,
+              116,
+              116
+            ],
+            "source_algorithm_versions": [
+              "iPlan RT Dose 4.5.5"
+            ],
+            "reference_software_version": "4.5.6",
+            "reference_shape_zyx": [
+              23,
+              348,
+              350
+            ],
+            "source_max_gy": 31.278588798159035,
+            "reference_max_gy": 31.4459495545,
+            "reference_quantum_gy": 0.0004837838393,
+            "floating_allowance_gy": 2.9989194445079193e-05,
+            "quantization_bound_gy": 0.00027188111562281847,
+            "all_inside": {
+              "count": 2750384,
+              "rmse_gy": 0.263231103911856,
+              "mean_error_gy": 0.12807585613969555,
+              "max_abs_error_gy": 4.2877700181807175,
+              "p95_abs_error_gy": 0.6298241220854557,
+              "exceeding_quantization_bound": 2728442,
+              "passes_quantization_bound": false
+            },
+            "positive_inside": {
+              "count": 1242081,
+              "rmse_gy": 0.04242208145954175,
+              "mean_error_gy": -0.0018096101412560235,
+              "max_abs_error_gy": 0.7689874049460342,
+              "p95_abs_error_gy": 0.08926546064684349,
+              "exceeding_quantization_bound": 1220139,
+              "passes_quantization_bound": false
+            },
+            "zero_reference_inside": {
+              "count": 1508303,
+              "rmse_gy": 0.3533682855189541,
+              "mean_error_gy": 0.23503597611804908,
+              "max_abs_error_gy": 4.2877700181807175,
+              "p95_abs_error_gy": 0.7691288100908334,
+              "exceeding_quantization_bound": 1508303,
+              "passes_quantization_bound": false
+            },
+            "above_1gy_inside": {
+              "count": 374736,
+              "rmse_gy": 0.0629276565671131,
+              "mean_error_gy": -0.005080086590292119,
+              "max_abs_error_gy": 0.6320644474190047,
+              "p95_abs_error_gy": 0.12669601346557519,
+              "exceeding_quantization_bound": 373040,
+              "passes_quantization_bound": false
+            },
+            "positive_outside_center_lattice": {
+              "count": 0,
+              "passes_quantization_bound": null
+            },
+            "zero_reference_outside_center_lattice_count": 51016,
+            "source_support_at_reference_voxels": {
+              "all_voxels": {
+                "count": 2801400,
+                "rmse_gy": 0.028247457939215525,
+                "mean_error_gy": -0.0008023425336836664,
+                "max_abs_error_gy": 0.7689874049460342,
+                "p95_abs_error_gy": 0.05812658205351577,
+                "exceeding_quantization_bound": 1220139,
+                "passes_quantization_bound": false
+              },
+              "source_support_count": 1242081,
+              "reference_positive_outside_source_support": 0,
+              "reference_zero_inside_source_support": 0
+            },
+            "source_dose_deposition_medium": "DOSE_TO_MEDIUM"
+          }
+        },
+        {
+          "plan_index": 2,
+          "blocked": "Only the verified stored Monte Carlo algorithm is supported"
+        }
+      ],
+      "closest_plan_index": 1,
+      "matching_plan_index": null,
+      "matching_positive_plan_index": null,
+      "matching_supported_plan_index": null,
+      "fine_tissue_export_grid_comparison": {
+        "source_shape_zyx": [
+          200,
+          351,
+          351
+        ],
+        "source_algorithm_versions": [
+          "iPlan RT Dose 4.5.5"
+        ],
+        "reference_software_version": "4.5.6",
+        "reference_shape_zyx": [
+          23,
+          348,
+          350
+        ],
+        "source_max_gy": 31.278588798159014,
+        "reference_max_gy": 31.4459495545,
+        "reference_quantum_gy": 0.0004837838393,
+        "floating_allowance_gy": 2.9989194445079193e-05,
+        "quantization_bound_gy": 0.00027188111562281847,
+        "all_inside": {
+          "count": 2801400,
+          "rmse_gy": 0.033579106241007135,
+          "mean_error_gy": -0.00045544788416648324,
+          "max_abs_error_gy": 1.4061093372746665,
+          "p95_abs_error_gy": 0.06277615965940177,
+          "exceeding_quantization_bound": 1269377,
+          "passes_quantization_bound": false
+        },
+        "positive_inside": {
+          "count": 1242081,
+          "rmse_gy": 0.045416239204681526,
+          "mean_error_gy": -0.0031957799017708075,
+          "max_abs_error_gy": 0.915006888963976,
+          "p95_abs_error_gy": 0.09206284495787642,
+          "exceeding_quantization_bound": 1220277,
+          "passes_quantization_bound": false
+        },
+        "zero_reference_inside": {
+          "count": 1559319,
+          "rmse_gy": 0.01956313885531772,
+          "mean_error_gy": 0.0017273731631997048,
+          "max_abs_error_gy": 1.4061093372746665,
+          "p95_abs_error_gy": 0.0,
+          "exceeding_quantization_bound": 49100,
+          "passes_quantization_bound": false
+        },
+        "above_1gy_inside": {
+          "count": 374736,
+          "rmse_gy": 0.06747494634158,
+          "mean_error_gy": -0.007204487433582081,
+          "max_abs_error_gy": 0.915006888963976,
+          "p95_abs_error_gy": 0.13159495760600798,
+          "exceeding_quantization_bound": 373047,
+          "passes_quantization_bound": false
+        },
+        "positive_outside_center_lattice": {
+          "count": 0,
+          "passes_quantization_bound": null
+        },
+        "zero_reference_outside_center_lattice_count": 0,
+        "source_dose_deposition_medium": "DOSE_TO_MEDIUM"
+      }
+    },
+    {
+      "case_index": 6,
+      "plans": [
+        {
+          "plan_index": 0,
+          "beam_count": 10,
+          "fractions": 5,
+          "comparison": {
+            "source_shape_zyx": [
+              81,
+              118,
+              111
+            ],
+            "source_algorithm_versions": [
+              "iPlan RT Dose 4.5.5"
+            ],
+            "reference_software_version": "4.5.6",
+            "reference_shape_zyx": [
+              22,
+              238,
+              226
+            ],
+            "source_max_gy": 31.892829837743193,
+            "reference_max_gy": 31.65481567365,
+            "reference_quantum_gy": 0.00048699716421,
+            "floating_allowance_gy": 3.0415372748393565e-05,
+            "quantization_bound_gy": 0.0002739139599725604,
+            "all_inside": {
+              "count": 1135401,
+              "rmse_gy": 0.20373474872621958,
+              "mean_error_gy": 0.12047217340766808,
+              "max_abs_error_gy": 1.2219534109405426,
+              "p95_abs_error_gy": 0.4460105427163056,
+              "exceeding_quantization_bound": 1128340,
+              "passes_quantization_bound": false
+            },
+            "positive_inside": {
+              "count": 627918,
+              "rmse_gy": 0.041682175161304735,
+              "mean_error_gy": 0.002031544770674583,
+              "max_abs_error_gy": 0.644434091147986,
+              "p95_abs_error_gy": 0.08645886550137531,
+              "exceeding_quantization_bound": 620857,
+              "passes_quantization_bound": false
+            },
+            "zero_reference_inside": {
+              "count": 507483,
+              "rmse_gy": 0.3011918755800109,
+              "mean_error_gy": 0.267020930021158,
+              "max_abs_error_gy": 1.2219534109405426,
+              "p95_abs_error_gy": 0.5261335224948561,
+              "exceeding_quantization_bound": 507483,
+              "passes_quantization_bound": false
+            },
+            "above_1gy_inside": {
+              "count": 118182,
+              "rmse_gy": 0.052610138492580005,
+              "mean_error_gy": 0.002209384886252456,
+              "max_abs_error_gy": 0.5673269205666416,
+              "p95_abs_error_gy": 0.10743512274258513,
+              "exceeding_quantization_bound": 117468,
+              "passes_quantization_bound": false
+            },
+            "positive_outside_center_lattice": {
+              "count": 710,
+              "rmse_gy": 0.13014946798287136,
+              "mean_error_gy": 0.03631923461058126,
+              "max_abs_error_gy": 0.44357839552116646,
+              "p95_abs_error_gy": 0.24815932262035498,
+              "exceeding_quantization_bound": 708,
+              "passes_quantization_bound": false
+            },
+            "zero_reference_outside_center_lattice_count": 47225,
+            "source_support_at_reference_voxels": {
+              "all_voxels": {
+                "count": 1183336,
+                "rmse_gy": 0.030530121745857904,
+                "mean_error_gy": 0.001099797678669419,
+                "max_abs_error_gy": 0.644434091147986,
+                "p95_abs_error_gy": 0.06074356151979815,
+                "exceeding_quantization_bound": 621565,
+                "passes_quantization_bound": false
+              },
+              "source_support_count": 628628,
+              "reference_positive_outside_source_support": 0,
+              "reference_zero_inside_source_support": 0
+            },
+            "source_dose_deposition_medium": "DOSE_TO_MEDIUM"
+          }
+        },
+        {
+          "plan_index": 1,
+          "blocked": "A selected treatment beam has no stored algorithm dose"
+        },
+        {
+          "plan_index": 2,
+          "blocked": "Only the verified stored Monte Carlo algorithm is supported"
+        },
+        {
+          "plan_index": 3,
+          "blocked": "Jaw availability, symmetry or orientation has not been verified"
+        },
+        {
+          "plan_index": 4,
+          "blocked": "Jaw availability, symmetry or orientation has not been verified"
+        },
+        {
+          "plan_index": 5,
+          "blocked": "Jaw availability, symmetry or orientation has not been verified"
+        }
+      ],
+      "closest_plan_index": 0,
+      "matching_plan_index": null,
+      "matching_positive_plan_index": null,
+      "matching_supported_plan_index": null,
+      "fine_tissue_export_grid_comparison": {
+        "source_shape_zyx": [
+          163,
+          242,
+          228
+        ],
+        "source_algorithm_versions": [
+          "iPlan RT Dose 4.5.5"
+        ],
+        "reference_software_version": "4.5.6",
+        "reference_shape_zyx": [
+          22,
+          238,
+          226
+        ],
+        "source_max_gy": 31.462509561824838,
+        "reference_max_gy": 31.65481567365,
+        "reference_quantum_gy": 0.00048699716421,
+        "floating_allowance_gy": 3.0188384698703885e-05,
+        "quantization_bound_gy": 0.0002736869500949979,
+        "all_inside": {
+          "count": 1182182,
+          "rmse_gy": 0.03820541027481976,
+          "mean_error_gy": 0.0009980387154344748,
+          "max_abs_error_gy": 1.0936320595737499,
+          "p95_abs_error_gy": 0.07027313192308503,
+          "exceeding_quantization_bound": 645225,
+          "passes_quantization_bound": false
+        },
+        "positive_inside": {
+          "count": 628628,
+          "rmse_gy": 0.04802228724788672,
+          "mean_error_gy": -0.0010738211370241828,
+          "max_abs_error_gy": 1.0936320595737499,
+          "p95_abs_error_gy": 0.09262092376287713,
+          "exceeding_quantization_bound": 621373,
+          "passes_quantization_bound": false
+        },
+        "zero_reference_inside": {
+          "count": 553554,
+          "rmse_gy": 0.02232408141096817,
+          "mean_error_gy": 0.0033508879683192536,
+          "max_abs_error_gy": 0.5867099031494944,
+          "p95_abs_error_gy": 0.0,
+          "exceeding_quantization_bound": 23852,
+          "passes_quantization_bound": false
+        },
+        "above_1gy_inside": {
+          "count": 118182,
+          "rmse_gy": 0.06430571955038732,
+          "mean_error_gy": 0.0013804367785347825,
+          "max_abs_error_gy": 1.0936320595737499,
+          "p95_abs_error_gy": 0.119877779012974,
+          "exceeding_quantization_bound": 117501,
+          "passes_quantization_bound": false
+        },
+        "positive_outside_center_lattice": {
+          "count": 0,
+          "passes_quantization_bound": null
+        },
+        "zero_reference_outside_center_lattice_count": 1154,
+        "source_dose_deposition_medium": "DOSE_TO_MEDIUM"
+      }
+    },
+    {
+      "case_index": 7,
+      "plans": [
+        {
+          "plan_index": 0,
+          "beam_count": 8,
+          "fractions": 30,
+          "comparison": {
+            "source_shape_zyx": [
+              82,
+              96,
+              96
+            ],
+            "source_algorithm_versions": [
+              "iPlan RT Dose 4.5.5"
+            ],
+            "reference_software_version": "4.5.6",
+            "reference_shape_zyx": [
+              22,
+              290,
+              290
+            ],
+            "source_max_gy": 60.05668304103892,
+            "reference_max_gy": 60.1035270693,
+            "reference_quantum_gy": 0.00092466964722,
+            "floating_allowance_gy": 5.731919009122066e-05,
+            "quantization_bound_gy": 0.0005196540150791407,
+            "all_inside": {
+              "count": 1793302,
+              "rmse_gy": 0.5464323759219887,
+              "mean_error_gy": 0.28910260409311545,
+              "max_abs_error_gy": 4.277511347309773,
+              "p95_abs_error_gy": 1.2739561226692295,
+              "exceeding_quantization_bound": 1782034,
+              "passes_quantization_bound": false
+            },
+            "positive_inside": {
+              "count": 949342,
+              "rmse_gy": 0.08702115485773941,
+              "mean_error_gy": 0.0014253909228736398,
+              "max_abs_error_gy": 1.3037653723479607,
+              "p95_abs_error_gy": 0.17986781031674376,
+              "exceeding_quantization_bound": 938074,
+              "passes_quantization_bound": false
+            },
+            "zero_reference_inside": {
+              "count": 843960,
+              "rmse_gy": 0.7911649601586133,
+              "mean_error_gy": 0.6127009510591609,
+              "max_abs_error_gy": 4.277511347309773,
+              "p95_abs_error_gy": 1.581948281605795,
+              "exceeding_quantization_bound": 843960,
+              "passes_quantization_bound": false
+            },
+            "above_1gy_inside": {
+              "count": 485878,
+              "rmse_gy": 0.11055936858784955,
+              "mean_error_gy": 0.0025262206707575272,
+              "max_abs_error_gy": 1.3037653723479607,
+              "p95_abs_error_gy": 0.22498508610173443,
+              "exceeding_quantization_bound": 483125,
+              "passes_quantization_bound": false
+            },
+            "positive_outside_center_lattice": {
+              "count": 0,
+              "passes_quantization_bound": null
+            },
+            "zero_reference_outside_center_lattice_count": 56898,
+            "source_support_at_reference_voxels": {
+              "all_voxels": {
+                "count": 1850200,
+                "rmse_gy": 0.06233426625484174,
+                "mean_error_gy": 0.0007313714568709909,
+                "max_abs_error_gy": 1.3037653723479607,
+                "p95_abs_error_gy": 0.12929757381654058,
+                "exceeding_quantization_bound": 938074,
+                "passes_quantization_bound": false
+              },
+              "source_support_count": 949342,
+              "reference_positive_outside_source_support": 0,
+              "reference_zero_inside_source_support": 0
+            },
+            "source_dose_deposition_medium": "DOSE_TO_MEDIUM"
+          }
+        },
+        {
+          "plan_index": 1,
+          "blocked": "Only the verified stored Monte Carlo algorithm is supported"
+        },
+        {
+          "plan_index": 2,
+          "beam_count": 8,
+          "fractions": 30,
+          "comparison": {
+            "source_shape_zyx": [
+              82,
+              96,
+              96
+            ],
+            "source_algorithm_versions": [
+              "iPlan RT Dose 4.5.6"
+            ],
+            "reference_software_version": "4.5.6",
+            "reference_shape_zyx": [
+              22,
+              290,
+              290
+            ],
+            "source_max_gy": 60.180521217989735,
+            "reference_max_gy": 60.1035270693,
+            "reference_quantum_gy": 0.00092466964722,
+            "floating_allowance_gy": 5.7392619055463e-05,
+            "quantization_bound_gy": 0.0005197274731472135,
+            "all_inside": {
+              "count": 1793302,
+              "rmse_gy": 0.5482786498412318,
+              "mean_error_gy": 0.2900550850430097,
+              "max_abs_error_gy": 4.225478129706949,
+              "p95_abs_error_gy": 1.2952521425246115,
+              "exceeding_quantization_bound": 843960,
+              "passes_quantization_bound": false
+            },
+            "positive_inside": {
+              "count": 949342,
+              "rmse_gy": 0.00026680881952521543,
+              "mean_error_gy": 3.3241456809912886e-08,
+              "max_abs_error_gy": 0.00046710667827909447,
+              "p95_abs_error_gy": 0.00043918375600937305,
+              "exceeding_quantization_bound": 0,
+              "passes_quantization_bound": true
+            },
+            "zero_reference_inside": {
+              "count": 843960,
+              "rmse_gy": 0.7992213779777098,
+              "mean_error_gy": 0.6163281820942796,
+              "max_abs_error_gy": 4.225478129706949,
+              "p95_abs_error_gy": 1.6087839250631757,
+              "exceeding_quantization_bound": 843960,
+              "passes_quantization_bound": false
+            },
+            "above_1gy_inside": {
+              "count": 485878,
+              "rmse_gy": 0.0002668086535883921,
+              "mean_error_gy": 1.0233418299171502e-08,
+              "max_abs_error_gy": 0.00046710667827909447,
+              "p95_abs_error_gy": 0.0004393022970467175,
+              "exceeding_quantization_bound": 0,
+              "passes_quantization_bound": true
+            },
+            "positive_outside_center_lattice": {
+              "count": 0,
+              "passes_quantization_bound": null
+            },
+            "zero_reference_outside_center_lattice_count": 56898,
+            "source_support_at_reference_voxels": {
+              "all_voxels": {
+                "count": 1850200,
+                "rmse_gy": 0.0001911182633994388,
+                "mean_error_gy": 1.7056270182054013e-08,
+                "max_abs_error_gy": 0.00046710667827909447,
+                "p95_abs_error_gy": 0.0004173121915397412,
+                "exceeding_quantization_bound": 0,
+                "passes_quantization_bound": true
+              },
+              "source_support_count": 949342,
+              "reference_positive_outside_source_support": 0,
+              "reference_zero_inside_source_support": 0
+            },
+            "source_dose_deposition_medium": "DOSE_TO_MEDIUM"
+          }
+        }
+      ],
+      "closest_plan_index": 2,
+      "matching_plan_index": null,
+      "matching_positive_plan_index": 2,
+      "matching_supported_plan_index": 2,
+      "fine_tissue_export_grid_comparison": {
+        "source_shape_zyx": [
+          165,
+          293,
+          292
+        ],
+        "source_algorithm_versions": [
+          "iPlan RT Dose 4.5.6"
+        ],
+        "reference_software_version": "4.5.6",
+        "reference_shape_zyx": [
+          22,
+          290,
+          290
+        ],
+        "source_max_gy": 60.18052121798973,
+        "reference_max_gy": 60.1035270693,
+        "reference_quantum_gy": 0.00092466964722,
+        "floating_allowance_gy": 5.7392619055463e-05,
+        "quantization_bound_gy": 0.0005197274731472135,
+        "all_inside": {
+          "count": 1850200,
+          "rmse_gy": 0.034132362661343264,
+          "mean_error_gy": 0.0005574021933653763,
+          "max_abs_error_gy": 1.1530220221108924,
+          "p95_abs_error_gy": 0.000451292835949428,
+          "exceeding_quantization_bound": 70657,
+          "passes_quantization_bound": false
+        },
+        "positive_inside": {
+          "count": 949342,
+          "rmse_gy": 0.03096661624489032,
+          "mean_error_gy": -0.0034716006530734764,
+          "max_abs_error_gy": 1.1092716731680576,
+          "p95_abs_error_gy": 0.0004538874945114846,
+          "exceeding_quantization_bound": 30751,
+          "passes_quantization_bound": false
+        },
+        "zero_reference_inside": {
+          "count": 900858,
+          "rmse_gy": 0.037177904650129816,
+          "mean_error_gy": 0.004803245178879135,
+          "max_abs_error_gy": 1.1530220221108924,
+          "p95_abs_error_gy": 0.0,
+          "exceeding_quantization_bound": 39906,
+          "passes_quantization_bound": false
+        },
+        "above_1gy_inside": {
+          "count": 485878,
+          "rmse_gy": 0.038550617547820944,
+          "mean_error_gy": -0.004302298227528994,
+          "max_abs_error_gy": 1.1092716731680576,
+          "p95_abs_error_gy": 0.00044984509335466155,
+          "exceeding_quantization_bound": 11500,
+          "passes_quantization_bound": false
+        },
+        "positive_outside_center_lattice": {
+          "count": 0,
+          "passes_quantization_bound": null
+        },
+        "zero_reference_outside_center_lattice_count": 0,
+        "source_dose_deposition_medium": "DOSE_TO_MEDIUM"
+      }
+    }
+  ]
+}
